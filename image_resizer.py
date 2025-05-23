@@ -6,8 +6,10 @@ from pathlib import Path
 
 # Configuration Section
 # Modify this path to change the default image folder
-DEFAULT_IMAGE_PATH = r"C:\Users\eacha\Documents\04_Crypto\MEME\Token Images"
-DEFAULT_OUTPUT_PATH = r"C:\Users\eacha\Documents\04_Crypto\MEME\Token Images"
+# Ex. DEFAULT_IMAGE_PATH = r"C:\Users\user\Documents\Pictures"
+# Ex. DEFAULT_OUTPUT_PATH = r"C:\Users\user\Documents\Pictures"
+DEFAULT_IMAGE_PATH = os.path.join(os.path.expanduser("~"), "Pictures")
+DEFAULT_OUTPUT_PATH = os.path.join(os.path.expanduser("~"), "Pictures", "Resized_Images")
 
 def select_image(default_path: str) -> str:
     """
